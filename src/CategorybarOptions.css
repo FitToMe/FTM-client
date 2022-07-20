@@ -1,0 +1,23 @@
+.categorybarOptions{
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.categorybarOption{
+    color: black;
+    cursor: pointer;
+    padding: 7px 15px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid #f8d1d1;
+    min-width: 40px;
+}
+
+.categorybarOption:hover {
+    color: black;
+    border-radius: 20px;
+    background-color: #eddddd;
+    transform: scale(1, 1);
+}
