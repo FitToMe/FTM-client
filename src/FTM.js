@@ -2,6 +2,7 @@ import React from 'react';
 import './FTM.css';
 import Navbar from "./Navbar";
 import Categorybar from "./Categorybar";
+import Feed from "./Feed";
 
 //FTM 메인 페이지
 function Ftm() {
@@ -11,7 +12,12 @@ function Ftm() {
             <div className="category_bar">
                 <Categorybar/>
             </div>
-            <h1> 메인페이지 </h1>
+            <div className="feeds">
+                <Feed />
+                <Feed />
+                <Feed />
+                <Feed />
+            </div>
         </div>
     );
 }

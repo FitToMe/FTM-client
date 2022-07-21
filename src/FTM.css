@@ -1,0 +1,9 @@
+.ftm{
+    padding-bottom: 100px;
+}
+
+.feeds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

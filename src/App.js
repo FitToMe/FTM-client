@@ -4,6 +4,7 @@ import './App.css';
 import FTM from "./FTM";
 import Login from "./Login";
 import Register from "./Register";
+import NewPost from "./NewPost";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                         <Route path="/" element={<FTM/>}/>
                         <Route path="/login" element={<Login />} />
                         <Route path="/register" element={<Register />} />
+                        <Route path="/newPost" element={<NewPost />} />
                     </Routes>
                 </BrowserRouter>
             </div>

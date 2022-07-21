@@ -24,10 +24,11 @@ function Navbar() {
                     <span className="option_login">로그인</span>
                 </Link>
                 <Button>취미 추천</Button>
-                <div className="nav_avatar">
-                    <Avatar/>
-                </div>
-
+                <Link to="/newPost">
+                    <div className="nav_avatar">
+                        <Avatar/>
+                    </div>
+                </Link>
             </div>
 
         </div>

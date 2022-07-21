@@ -1,0 +1,11 @@
+.feed{
+    margin-top: 80px;
+}
+
+.feed_category{
+    margin: 20px;
+}
+
+.feed_container{
+    display: flex;
+}
