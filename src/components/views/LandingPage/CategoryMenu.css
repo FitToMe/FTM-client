@@ -1,0 +1,30 @@
+.CategoryMenu{
+    overflow: hidden;
+    box-shadow: 0 2px 20px #d0d0d0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+/*transition 왜 안대냐*/
+
+.category_img{
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.category_title{
+    padding: 0 1rem;
+
+}
+
+.category_description{
+    padding: 0 1rem;
+}
+
+.CategoryMenu:hover{
+    transform: scale(1.02);
+ }

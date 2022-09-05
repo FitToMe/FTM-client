@@ -5,7 +5,7 @@ import ftm_logo from "../../../_img/ftm_logo.png";
 import {Avatar, Button} from "@mui/material";
 import {Search} from "@mui/icons-material";
 import {useSelector} from "react-redux";
-import {selectUser} from "../../../_features/userSlice";
+import {logout, selectUser} from "../../../_features/userSlice";
 
 
 function NavBar() {
@@ -14,12 +14,12 @@ function NavBar() {
 
     const handleAuthentication=() =>{
         if(user){  //로그인 상태일 때 : 로그인 대신 로그아웃 띄우기
-            //로그아웃
+
         }
     }
 
     return (
-        <div>
+        <div className="navbar">
             <Link to="/">
                 <div className="ftm_logo">
                     <img src={ftm_logo} alt=""/>
