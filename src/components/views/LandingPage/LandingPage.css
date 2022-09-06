@@ -1,14 +1,9 @@
-
-.feeds{
-    display: flex;
-    flex-direction: column;
-    margin-right: 150px;
-    margin-left: 150px;
+.ftm{
 }
-
-
-.feed_category{
-    margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+.category_menus{
+    padding: 100px 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 20rem));
+    gap: 3rem;
+    justify-content: center;
 }

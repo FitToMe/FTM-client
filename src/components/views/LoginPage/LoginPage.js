@@ -5,30 +5,45 @@ import NavBar from "../NavBar/NavBar";
 import CategoryBar from "../NavBar/CategoryBar";
 import ftm_logo from "../../../_img/ftm_logo.png";
 import axios from "axios";
-import {login} from "../../../_features/userSlice";
-import {useDispatch} from "react-redux";
+import {login, selectUser} from "../../../_features/userSlice";
+import {useDispatch, useSelector} from "react-redux";
 
 function LoginPage() {
 
-    const dispatch= useDispatch();
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
+
     const navigate = useNavigate();
 
     //로그인 버튼 클릭 이벤트
     const handleLogin = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8080/auth/login',
-            {email: email, password: password}
+        axios.post('/auth/login',
+            {email: email, password: password},
+            {withCredentials: true},
         ).then(function(response){
             console.log(response)
-            alert(`${email}님 환영합니다 ~`)
-            //navigate('/');
+            alert(`환영합니다 ~`)
+
+            axios.get('/auth',
+                {withCredentials: true},
+            ).then(function (response) {
+                dispatch(login({
+                    uid: response.data.response.id,
+                    email: response.data.response.email,
+                    nickName: response.data.response.nickname
+                }))
+            }).catch(function (error) {
+                console.log(error);
+            })
+
+            navigate('/');
         }).catch(function(error){
             console.log(`Error Message: ${error}`);
         })
+
 
         setEmail("");
         setPassword("");

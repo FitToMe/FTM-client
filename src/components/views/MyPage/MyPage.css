@@ -1,10 +1,13 @@
-.myPage_info{
-    width: 1300px;
-    height: 100%;
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
+.myPage{
+    height: 100vh;
+}
 
+.myPage_container{
+    padding: 100px 5rem;
+    justify-content: center;
+}
+.myPage_info{
+    display: flex;
 }
 
 .myPage_info >.css-2s90m6-MuiAvatar-root{
@@ -20,9 +23,7 @@
 }
 
 .myPage_posts{
-    padding: 40px;
-    padding-right: 30px;
+    padding-top: 5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }

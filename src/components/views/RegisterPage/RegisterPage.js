@@ -16,7 +16,7 @@ function RegisterPage() {
     const handleRegister = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8080/auth/signup',
+        axios.post('/auth/signup',
             {email: email, password: password, nickname: nickName}
         ).then(function (response) {
             //회원가입 성공했을 때만

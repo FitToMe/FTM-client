@@ -1,0 +1,51 @@
+.new_post {
+}
+
+.new_post_input_container {
+    background-color: white;
+    width: 1000px;
+    height: 100%;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*
+.submit_post {
+    position: relative;
+    top: -30px;
+    left: 930px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}*/
+
+.new_post_info {
+    border: 1px solid black;
+}
+
+.new_post_input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.input_title {
+    width: 90%;
+}
+
+.new_post_input > textarea {
+    width: 90%;
+    margin-top: 20px;
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.input_content {
+    width: 90%;
+    margin-top: 20px;
+}
+
+

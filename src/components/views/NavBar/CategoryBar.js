@@ -2,7 +2,7 @@ import React from 'react';
 
 function CategoryBar() {
     return (
-        <div>CategoryBar</div>
+        <div>필터 북마크</div>
     );
 }
 
