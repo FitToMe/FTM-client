@@ -13,7 +13,6 @@ function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
-    const user= useSelector(selectUser);
 
     const navigate = useNavigate();
 
@@ -40,7 +39,7 @@ function LoginPage() {
                 console.log(error);
             })
 
-            //navigate('/');
+            navigate('/');
         }).catch(function(error){
             console.log(`Error Message: ${error}`);
         })

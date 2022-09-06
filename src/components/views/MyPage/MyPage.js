@@ -1,15 +1,27 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './MyPage.css';
 import NavBar from "../NavBar/NavBar";
 import CategoryBar from "../NavBar/CategoryBar";
-import {Avatar} from "@mui/material";
+import {Avatar, Button} from "@mui/material";
 import {useSelector} from "react-redux";
 import {selectUser} from "../../../_features/userSlice";
+import axios from "axios";
+import PostPreview from "../PostPreview/PostPreview";
 
 function MyPage() {
     const user = useSelector(selectUser);
     const [myPosts, setMyPosts] = useState([]);
 
+    //전체 게시글 조회
+    useEffect(()=>{
+        axios.get(`/post/`,
+            {withCredentials: true},
+        ).then(function (response){
+            setMyPosts(response.data.response);
+        }).catch(function (error){
+            console.log(error);
+        })
+    },[]);
 
     return (
         <div className="myPage">
@@ -17,20 +29,23 @@ function MyPage() {
             <div className="category_bar">
                 <CategoryBar/>
             </div>
-            <div className="myPage_info">
-                <Avatar/>
-                <h4><strong>{user.email}</strong></h4>
+            <div className="myPage_container">
+                <div className="myPage_info">
+                    <Avatar/>
+                    <h4><strong>{user.nickName}</strong></h4>
+                </div>
                 <hr/>
                 <div className="myPage_posts">
-                    {myPosts.map(({id, post}) => (
-                        <div key={id}>
-                            {/*
-                                user.email === post.user.email ?
-                                    (<Post key={id} tPostId={id} category={post.category} title={post.title} user={post.user} timestamp={post.timestamp} content={post.content}
-                                           image={"https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbz88bV%2FbtqCl82YVq9%2FStnHX3ihhKiymwDkU55VZK%2Fimg.png"}/>
-
+                    {/*전체 게시글 중 회원이 쓴 게시글 조회
+                    : 게시글 조회하는데 uid말고 닉네임이 있길래 닉네임으로 조회했음.*/}
+                    {myPosts.map((element) => (
+                        <div key={element}>
+                            {
+                                user.nickName === element.authorNickname ?
+                                    (<PostPreview key={element.id} postId={element.id} title={element.title} content={element.content} authorNickname={element.authorNickname} modDate={element.modDate} regDate={element.regDate}
+                                           imageURL={element.imageURL}/>
                                     ) : ("")
-                            */}
+                          }
                         </div>
                     ))}
                 </div>

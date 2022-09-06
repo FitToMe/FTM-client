@@ -1,13 +1,14 @@
-import {combineReducers, configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
+import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import userReducer from '../_features/userSlice';
+import postReducer from '../_features/postSlice';
 import storage from "redux-persist/lib/storage";
 import {persistReducer} from "redux-persist";
 import thunk from "redux-thunk";
-import {useDispatch, useSelector} from "react-redux";
 
 //reducer 여러개 합치기
 const reducers = combineReducers({
     user: userReducer,
+    post: postReducer,
 })
 
 const persistConfig = {
