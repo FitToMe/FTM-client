@@ -5,11 +5,10 @@ import NavBar from "../NavBar/NavBar";
 import CategoryBar from "../NavBar/CategoryBar";
 import ftm_logo from "../../../_img/ftm_logo.png";
 import axios from "axios";
-import {login, selectUser} from "../../../_features/userSlice";
-import {useDispatch, useSelector} from "react-redux";
+import {login} from "../../../_features/userSlice";
+import {useDispatch} from "react-redux";
 
 function LoginPage() {
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
@@ -43,7 +42,6 @@ function LoginPage() {
         }).catch(function(error){
             console.log(`Error Message: ${error}`);
         })
-
 
         setEmail("");
         setPassword("");

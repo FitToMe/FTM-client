@@ -29,6 +29,7 @@ function HobbyClassPage() {
             <div className="category_bar">
                 <CategoryBar/>
             </div>
+            {category}
             <div className="classPage_posts">
                 {posts.map((element) => (
                     <PostPreview key={element.id} postId={element.id} title={element.title} content={element.content}

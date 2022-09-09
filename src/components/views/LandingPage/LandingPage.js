@@ -23,7 +23,7 @@ function LandingPage() {
                 <CategoryBar/>
             </div>
             <div className="category_menus">
-                <Link to= "/category/travel" state={{category: '여행'}}>
+                <Link to= "/category/TRAVEL" state={{category: '여행'}}>
                     <div className="category_menu">
                         <CategoryMenu
                             img={travel_icon}
@@ -31,7 +31,7 @@ function LandingPage() {
                             description="여행이 취미인 사람~"/>
                     </div>
                 </Link>
-                <Link to="/category/sport" state={{category: '운동'}}>
+                <Link to="/category/WORKOUT" state={{category: '운동'}}>
                     <div className="category_menu">
                         <CategoryMenu
                             img={sport_icon}
@@ -39,7 +39,7 @@ function LandingPage() {
                             description="운동이 취미인 사람~"/>
                     </div>
                 </Link>
-                <Link to="/category/study" state={{category: '공부'}}>
+                <Link to="/category/STUDY" state={{category: '공부'}}>
                 <div className="category_menu">
                     <CategoryMenu
                         img={study_icon}
@@ -47,7 +47,7 @@ function LandingPage() {
                         description="공부 하고싶은 사람~"/>
                 </div>
                 </Link>
-                <Link to="/category/tv_program" state={{category: '드라마, 영화'}}>
+                <Link to="/category/TV_SHOW" state={{category: '드라마, 영화'}}>
                 <div className="category_menu">
                     <CategoryMenu
                         img={tv_program_icon}
@@ -55,7 +55,7 @@ function LandingPage() {
                         description="드라마, 영화 취미인 사람~"/>
                 </div>
                 </Link>
-                <Link to="/category/music" state={{category: '음악'}}>
+                <Link to="/category/MUSIC" state={{category: '음악'}}>
                 <div className="category_menu">
                     <CategoryMenu
                         img={music_icon}
@@ -63,7 +63,7 @@ function LandingPage() {
                         description="운동이 취미인 사람~"/>
                 </div>
                 </Link>
-                <Link to="/category/flower" state={{category: '꽃꽂이'}}>
+                <Link to="/category/FLOWER_ARRANGEMENT" state={{category: '꽃꽂이'}}>
                 <div className="category_menu">
                     <CategoryMenu
                         img={flower_icon}
