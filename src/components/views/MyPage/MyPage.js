@@ -13,15 +13,15 @@ function MyPage() {
     const [myPosts, setMyPosts] = useState([]);
 
     //전체 게시글 조회
-    useEffect(()=>{
+    useEffect(() => {
         axios.get(`/post/`,
             {withCredentials: true},
-        ).then(function (response){
+        ).then(function (response) {
             setMyPosts(response.data.response);
-        }).catch(function (error){
+        }).catch(function (error) {
             console.log(error);
         })
-    },[]);
+    }, []);
 
     return (
         <div className="myPage">
@@ -40,12 +40,14 @@ function MyPage() {
                     : 게시글 조회하는데 uid말고 닉네임이 있길래 닉네임으로 조회했음.*/}
                     {myPosts.map((element) => (
                         <div key={element}>
-                            {
+                            { // viewCnt 추가
                                 user.nickName === element.authorNickname ?
-                                    (<PostPreview key={element.id} postId={element.id} title={element.title} content={element.content} authorNickname={element.authorNickname} modDate={element.modDate} regDate={element.regDate}
-                                           imageURL={element.imageURL}/>
+                                    (<PostPreview key={element.id} postId={element.id} title={element.title}
+                                                  content={element.content} authorNickname={element.authorNickname}
+                                                  modDate={element.modDate} regDate={element.regDate}
+                                                  imageURL={element.imageURL}/>
                                     ) : ("")
-                          }
+                            }
                         </div>
                     ))}
                 </div>

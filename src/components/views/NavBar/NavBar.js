@@ -5,7 +5,7 @@ import ftm_logo from "../../../_img/ftm_logo.png";
 import {Avatar, Button} from "@mui/material";
 import {Search} from "@mui/icons-material";
 import {useSelector} from "react-redux";
-import {logout, selectUser} from "../../../_features/userSlice";
+import {selectUser} from "../../../_features/userSlice";
 
 
 function NavBar() {

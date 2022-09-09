@@ -9,12 +9,12 @@ import MyPage from "./components/views/MyPage/MyPage";
 import PostDetailPage from "./components/views/PostDetailPage/PostDetailPage";
 import {useDispatch} from "react-redux";
 import axios from "axios";
-import {login} from "./_features/userSlice";
+import CategoryPage from "./components/views/CategoryPage/CategoryPage";
+import HobbyClubPage from "./components/views/HobbyClubPage/HobbyClubPage";
+import HobbyClassPage from "./components/views/HobbyClassPage/HobbyClassPage";
+import HobbyCommunityPage from "./components/views/HobbyCommunityPage/HobbyCommunityPage";
 
 function App() {
-
-    const dispatch= useDispatch();
-
     //페이지 시작하자마자 실행
    useEffect(() => {
          axios.get('/auth',
@@ -37,6 +37,11 @@ function App() {
                     <Route path="/newPost" element={<NewPostPage/>}/>
                     <Route path="/myPage/:user" element={<MyPage/>}/>
                     <Route path="/postDetail" element={<PostDetailPage/>}/>
+
+                    <Route path="/category/:category" element={<CategoryPage/>} />
+                    <Route path="/category/:category/hobbyClubPage" element={<HobbyClubPage/>} />
+                    <Route path="/category/:category/hobbyClassPage" element={<HobbyClassPage/>} />
+                    <Route path="/category/:category/hobbyCommunityPage" element={<HobbyCommunityPage/>} />
 
                 </Routes>
             </BrowserRouter>
