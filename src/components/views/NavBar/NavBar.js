@@ -5,16 +5,15 @@ import ftm_logo from "../../../_img/ftm_logo.png";
 import {Avatar, Button} from "@mui/material";
 import {Search} from "@mui/icons-material";
 import {useSelector} from "react-redux";
-import {logout, selectUser} from "../../../_features/userSlice";
+import {selectUser} from "../../../_features/userSlice";
 
 
 function NavBar() {
+    const user = useSelector(selectUser);
 
-    const user= useSelector(selectUser);
-
-    const handleAuthentication=() =>{
-        if(user){  //로그인 상태일 때 : 로그인 대신 로그아웃 띄우기
-
+    const handleAuthentication = () => {
+        if (user) {
+            //로그아웃
         }
     }
 
@@ -41,7 +40,7 @@ function NavBar() {
                 </Link>
                 <Link to={`/myPage/${user}`}>
                     <div className="nav_avatar">
-                        <Avatar />
+                        <Avatar/>
                     </div>
                 </Link>
             </div>
