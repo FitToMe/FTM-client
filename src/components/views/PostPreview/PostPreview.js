@@ -12,12 +12,14 @@ function PostPreview(props) {
         <div className="PostPreview"
              onClick={() => dispatch(setPostInfo({
                  postId: props.postId,
+                 category: props.category,
                  title: props.title,
                  content: props.content,
                  authorNickname: props.authorNickname,
                  modDate: props.modDate,
                  regDate: props.regDate,
                  imageURL: props.imageURL,
+                 viewCnt: props.viewCnt,
              }))}
         >
 
@@ -26,9 +28,7 @@ function PostPreview(props) {
                 <div className="postPreview_info">
                     <img className="postPreview_img" src={props.imageURL}
                          alt=""/>
-                    {/*
                     <p className="postPreview_category">{props.category}</p>
-                    */}
                     <p className="postPreview_title">{props.title}</p>
                 </div>
             </Link>

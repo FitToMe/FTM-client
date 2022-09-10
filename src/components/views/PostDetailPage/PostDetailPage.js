@@ -17,8 +17,7 @@ function PostDetailPage() {
             </div>
 
             <div className="post_detail_info">
-                {/* 카테고리 항목 추기
-                <p className="post_category">{post.category}</p>*/}
+                <p className="post_category">{post.category}</p>
                 <p className="post_title"><strong>{post.title}</strong></p>
                 <div className="post_detail_info_container">
                     <Avatar/>

@@ -7,6 +7,7 @@
     justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in;
+    padding: 0 3rem;
 }
 
 .category_img{
@@ -19,7 +20,7 @@
 
 .category_title{
     padding: 0 1rem;
-
+    text-align: center;
 }
 
 .category_description{

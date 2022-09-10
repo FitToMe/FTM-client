@@ -19,13 +19,12 @@ function RegisterPage() {
         axios.post('/auth/signup',
             {email: email, password: password, nickname: nickName}
         ).then(function (response) {
-            //회원가입 성공했을 때만
+            //회원가입 성공했을 때
             navigate('/login');
-            console.log(response.data);
             alert(`${nickName}님 환영합니다~`);
         }).catch(function (error) {
             console.log(`Error Message: ${error}`);
-        })
+        });
 
         setEmail("");
         setPassword("");

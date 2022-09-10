@@ -18,25 +18,45 @@ function CategoryPage() {
 
     useEffect(() => {
         axios.get(`/community-post/`,
+            {
+                params: {
+                    category: category,
+                    pageNum: 0,
+                    pageSize: 4,
+                }
+            },
             {withCredentials: true},
         ).then(function (response) {
-            setCommunityPosts(response.data.response);
+            setCommunityPosts(response.data.response.content);
         }).catch(function (error) {
             console.log(error);
         })
 
         axios.get(`/class-post/`,
+            {
+                params: {
+                    category: category,
+                    pageNum: 0,
+                    pageSize: 4,
+                }
+            },
             {withCredentials: true},
         ).then(function (response) {
-            setClassPosts(response.data.response);
+            setClassPosts(response.data.response.content);
         }).catch(function (error) {
             console.log(error);
         })
 
-        axios.get(`/small-group-post/`,
+        axios.get(`/small-group-post/`, {
+                params: {
+                    category: category,
+                    pageNum: 0,
+                    pageSize: 4,
+                }
+            },
             {withCredentials: true},
         ).then(function (response) {
-            setClubPosts(response.data.response);
+            setClubPosts(response.data.response.content);
         }).catch(function (error) {
             console.log(error);
         })
@@ -48,57 +68,70 @@ function CategoryPage() {
             <div className="category_bar">
                 <CategoryBar/>
             </div>
-            {category}
 
-            {/*소모임*/}
-            <div className="category_club_container">
-                <Link to={`/category/${category}/hobbyClubPage`} state={{category: category}}>
-                    소모임
-                </Link>
-                {clubPosts.map((element) => (
-                    <div key={element.id}>
-                        {<PostPreview key={element.id} postId={element.id} title={element.title}
-                                      content={element.content} authorNickname={element.authorNickname}
-                                      modDate={element.modDate} regDate={element.regDate}
-                                      imageURL={element.imageURL}/>
-                        }
+            <div className="category_center">
+                {/*소모임*/}
+                <div className="category_detail_container">
+                    <Link to={`/category/${category}/hobbySmallGroupPage`} state={{category: category}}>
+                        {category} 소모임
+                    </Link>
+                    <div className="category_post_container">
+                        {clubPosts.map((element) => (
+                            <div key={element.id}>
+                                {<PostPreview key={element.id} postId={element.id} category={category}
+                                              title={element.title}
+                                              content={element.content} authorNickname={element.authorNickname}
+                                              modDate={element.modDate} regDate={element.regDate}
+                                              imageURL={element.imageURL}
+                                              totalParticipant={element.totalParticipant}
+                                              participantNum={element.participantNum} viewCnt={element.viewCnt}
+                                              cost={element.cost} isRecruiting={element.isRecruiting}/>
+                                }
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
 
 
-            {/*클래스*/}
-            <div className="category_class_container">
-                <Link to={`/category/${category}/hobbyClassPage`} state={{category: category}}>
-                    클래스
-                </Link>
-                {classPosts.map((element) => (
-                    <div key={element.id}>
-                        {<PostPreview key={element.id} postId={element.id} title={element.title}
-                                      content={element.content} authorNickname={element.authorNickname}
-                                      modDate={element.modDate} regDate={element.regDate}
-                                      imageURL={element.imageURL}/>
-                        }
+                <div className="category_detail_container">
+                    {/*클래스*/}
+                    <Link to={`/category/${category}/hobbyClassPage`} state={{category: category}}>
+                        {category} 클래스
+                    </Link>
+                    <div className="category_post_container">
+                        {classPosts.map((element) => (
+                            <div key={element.id}>
+                                {<PostPreview key={element.id} postId={element.id} title={element.title}
+                                              content={element.content} authorNickname={element.authorNickname}
+                                              modDate={element.modDate} regDate={element.regDate}
+                                              imageURL={element.imageURL}
+                                              totalParticipant={element.totalParticipant}
+                                              participantNum={element.participantNum} viewCnt={element.viewCnt}
+                                              cost={element.cost} isRecruiting={element.isRecruiting}/>
+                                }
+                            </div>
+                        ))}
                     </div>
-                ))}
-            </div>
+                </div>
 
-            {/*커뮤니티*/}
-            <div className="category_community_container">
-                <Link to={`/category/${category}/hobbyCommunityPage`} state={{category: category}}>
-                    커뮤니티
-                </Link>
-                {communityPosts.map((element) => (
-                    <div key={element.id}>
-                        {<PostPreview key={element.id} postId={element.id} title={element.title}
-                                      content={element.content} authorNickname={element.authorNickname}
-                                      modDate={element.modDate} regDate={element.regDate}
-                                      imageURL={element.imageURL}/>
-                        }
+                <div className="category_detail_container">
+                    {/*커뮤니티*/}
+                    <Link to={`/category/${category}/hobbyCommunityPage`} state={{category: category}}>
+                        {category} 커뮤니티
+                    </Link>
+                    <div className="category_post_container">
+                        {communityPosts.map((element) => (
+                            <div key={element.id}>
+                                {<PostPreview key={element.id} postId={element.id} title={element.title}
+                                              content={element.content} authorNickname={element.authorNickname}
+                                              modDate={element.modDate} regDate={element.regDate}
+                                              imageURL={element.imageURL} viewCnt={element.viewCnt}/>
+                                }
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
             </div>
-
         </div>
     );
 }

@@ -24,7 +24,7 @@ a {
 .nav_search {
     display: flex;
     align-items: center;
-    width: 600px;
+    width: 25rem;
     height: 100%;
     border: 1px solid #eddddd;
     border-radius: 5px;
@@ -56,7 +56,7 @@ a {
     margin-right: 50px;
 }
 .nav_option >a{
-    min-width: 80px;
+    min-width: 100px;
 }
 
 /*로그인하기 버튼*/

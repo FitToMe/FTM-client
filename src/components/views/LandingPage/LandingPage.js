@@ -22,63 +22,72 @@ function LandingPage() {
             <div className="category_bar">
                 <CategoryBar/>
             </div>
+            <div className="category_menu_container">
             <div className="category_menus">
-                <Link to= "/category/TRAVEL" state={{category: '여행'}}>
+                <Link to="/category/TRAVEL" state={{category: 'TRAVEL'}}>
                     <div className="category_menu">
                         <CategoryMenu
                             img={travel_icon}
                             title="여행"
-                            description="여행이 취미인 사람~"/>
+                            // description="여행이 취미인 사람~"
+                        />
                     </div>
                 </Link>
-                <Link to="/category/WORKOUT" state={{category: '운동'}}>
+                <Link to="/category/WORKOUT" state={{category: 'WORKOUT'}}>
                     <div className="category_menu">
                         <CategoryMenu
                             img={sport_icon}
                             title="운동"
-                            description="운동이 취미인 사람~"/>
+                            // description="운동이 취미인 사람~"
+                        />
                     </div>
                 </Link>
-                <Link to="/category/STUDY" state={{category: '공부'}}>
-                <div className="category_menu">
-                    <CategoryMenu
-                        img={study_icon}
-                        title="공부"
-                        description="공부 하고싶은 사람~"/>
-                </div>
+                <Link to="/category/STUDY" state={{category: 'STUDY'}}>
+                    <div className="category_menu">
+                        <CategoryMenu
+                            img={study_icon}
+                            title="공부"
+                            // description="공부 하고싶은 사람~"
+                        />
+                    </div>
                 </Link>
-                <Link to="/category/TV_SHOW" state={{category: '드라마, 영화'}}>
-                <div className="category_menu">
-                    <CategoryMenu
-                        img={tv_program_icon}
-                        title="드라마, 영화"
-                        description="드라마, 영화 취미인 사람~"/>
-                </div>
+                <Link to="/category/TV_SHOW" state={{category: 'TV_SHOW'}}>
+                    <div className="category_menu">
+                        <CategoryMenu
+                            img={tv_program_icon}
+                            title="드라마, 영화"
+                            // description="드라마, 영화 취미인 사람~"
+                        />
+                    </div>
                 </Link>
-                <Link to="/category/MUSIC" state={{category: '음악'}}>
-                <div className="category_menu">
-                    <CategoryMenu
-                        img={music_icon}
-                        title="음악"
-                        description="운동이 취미인 사람~"/>
-                </div>
+                <Link to="/category/MUSIC" state={{category: 'MUSIC'}}>
+                    <div className="category_menu">
+                        <CategoryMenu
+                            img={music_icon}
+                            title="음악"
+                            // description="운동이 취미인 사람~"
+                        />
+                    </div>
                 </Link>
-                <Link to="/category/FLOWER_ARRANGEMENT" state={{category: '꽃꽂이'}}>
-                <div className="category_menu">
-                    <CategoryMenu
-                        img={flower_icon}
-                        title="꽃꽂이"
-                        description="운동이 취미인 사람~"/>
-                </div>
+                <Link to="/category/FLOWER_ARRANGEMENT" state={{category: 'FLOWER_ARRANGEMENT'}}>
+                    <div className="category_menu">
+                        <CategoryMenu
+                            img={flower_icon}
+                            title="꽃꽂이"
+                            // description="운동이 취미인 사람~"
+                        />
+                    </div>
                 </Link>
                 <Link to="/category/DIY" state={{category: 'DIY'}}>
-                <div className="category_menu">
-                    <CategoryMenu
-                        img={DIY_icon}
-                        title="DIY"
-                        description="운동이 취미인 사람~"/>
-                </div>
+                    <div className="category_menu">
+                        <CategoryMenu
+                            img={DIY_icon}
+                            title="DIY"
+                            // description="운동이 취미인 사람~"
+                        />
+                    </div>
                 </Link>
+            </div>
             </div>
         </div>
     );

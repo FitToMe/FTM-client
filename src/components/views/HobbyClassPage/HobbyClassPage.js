@@ -11,13 +11,18 @@ function HobbyClassPage() {
     const category = location.state.category;
     const [posts, setPosts] = useState([]);
 
-
     //전체 클래스 게시글 조회
     useEffect(() => {
-        axios.get(`/class-post/`,
+        axios.get(`/class-post/`, {
+                params: {
+                    category: category,
+                    pageNum: 0,
+                    pageSize: 10,
+                }
+            },
             {withCredentials: true},
         ).then(function (response) {
-            setPosts(response.data.response);
+            setPosts(response.data.response.content);
         }).catch(function (error) {
             console.log(error);
         })
@@ -30,7 +35,7 @@ function HobbyClassPage() {
                 <CategoryBar/>
             </div>
             {category}
-            <div className="classPage_posts">
+            <div className="Page_posts">
                 {posts.map((element) => (
                     <PostPreview key={element.id} postId={element.id} title={element.title} content={element.content}
                                  authorNickname={element.authorNickname} modDate={element.modDate}
@@ -39,7 +44,7 @@ function HobbyClassPage() {
                 ))
                 }
             </div>
-            HobbyClassPage</div>
+        </div>
     );
 }
 
