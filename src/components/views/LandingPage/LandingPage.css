@@ -1,22 +1,32 @@
-.ftm{
-
+.ftm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 a:link {
     color: black;
     background-color: transparent;
     text-decoration: none;
 }
 
-   a:visited {
-       color: black;
-       background-color: transparent;
-       text-decoration: none;
-   }
-
-.category_menus{
-    padding: 100px 5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 20rem));
-    gap: 3rem;
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+.category_menu_container{
+    padding-top: 50px;
+    display: flex;
     justify-content: center;
+}
+
+.category_menus {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.category_menu{
+    padding: 1rem;
 }

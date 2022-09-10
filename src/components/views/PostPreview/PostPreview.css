@@ -1,24 +1,17 @@
 .PostPreview{
-    padding: 3rem;
+    padding: 1rem;
     cursor: pointer;
     transition: transform 200ms ease-in;
 }
-/*transition 왜 안대냐*/
 
 .postPreview_img{
     width: 12rem;
     height: 12rem;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .postPreview_title{
-    padding: 0 1rem;
-
 }
-/*
-.category_description{
-    padding: 0 1rem;
-}*/
 
 .PostPreview:hover{
     transform: scale(1.02);

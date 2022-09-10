@@ -21,6 +21,7 @@ function NewCommunityPost(props) {
             setInputImageURL("");
         }).catch(function (error) {
             console.log(error);
+            alert('칸을 모두 채워주세요');
         });
     }
 

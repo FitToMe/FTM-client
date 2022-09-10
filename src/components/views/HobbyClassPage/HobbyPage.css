@@ -1,0 +1,4 @@
+.Page_posts{
+    display: flex;
+    flex-wrap: wrap;
+}

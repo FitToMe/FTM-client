@@ -1,0 +1,24 @@
+.category_center{
+    display: flex;
+    flex-direction: column;
+    width: 56rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category_detail_container{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.category_detail_container >a{
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.category_post_container{
+    display: flex;
+}

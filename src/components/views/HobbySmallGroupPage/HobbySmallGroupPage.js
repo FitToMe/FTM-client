@@ -6,14 +6,14 @@ import CategoryBar from "../NavBar/CategoryBar";
 import axios from "axios";
 import PostPreview from "../PostPreview/PostPreview";
 
-function HobbyCommunityPage() {
-    const location = useLocation();
-    const category = location.state.category;
+function HobbySmallGroupPage() {
+    const location=useLocation();
+    const category= location.state.category;
     const [posts, setPosts] = useState([]);
 
     //전체 커뮤니티 게시글 조회
     useEffect(() => {
-        axios.get(`/community-post/`, {
+        axios.get(`/small-group-post/`, {
                 params: {
                     category: category,
                     pageNum: 0,
@@ -29,7 +29,7 @@ function HobbyCommunityPage() {
     }, []);
 
     return (
-        <div className="HobbyCommunityPage">
+        <div className="HobbySmallGroupPage">
             <NavBar/>
             <div className="category_bar">
                 <CategoryBar/>
@@ -48,4 +48,4 @@ function HobbyCommunityPage() {
     );
 }
 
-export default HobbyCommunityPage;
+export default HobbySmallGroupPage;
