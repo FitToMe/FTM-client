@@ -5,47 +5,114 @@
     background-color: white;
     width: 1000px;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
-}
-/*
-.submit_post {
-    position: relative;
-    top: -30px;
-    left: 930px;
-    border: none;
-    background-color: transparent;
-    font-size: 16px;
-}*/
-
-.new_post_info {
-    border: 1px solid black;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
-.new_post_input {
-    margin-top: 20px;
+.new_post_info{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+}
+
+/*게시판 선택 컨테이너*/
+.new_post_choice_post_type_container{
+    width: 220px;
+    padding: 20px;
+    padding-right: 10px;
+    background-color: #ecdada;
+    border-radius: 10px;
+}
+
+.new_post_choice_button_container{
+    padding-top: 10px;
+}
+
+.new_post_choice_button_container> button{
+    margin-right: 10px;
+}
+
+/*카테고리 선택 컨테이너*/
+.new_post_choice_category_container{
+    width: 100px;
+    padding: 20px;
+    background-color: #ecdada;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    border-radius: 10px;
 }
 
-.input_title {
+.new_post_choice_category_container >button{
+    margin-top: 10px;
+    width: 100px;
+}
+
+/*이미지 파일 업로드 컨테이너*/
+.new_post_input_img_container{
+    width: 100px;
+    padding: 20px;
+    background-color: #ecdada;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+/*등록버튼*/
+.new_post_submit_button{
+}
+
+.new_post_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*선택한 카테고리 출력*/
+.new_post_category{
+    float: left;
+}
+
+/*제목 입력칸*/
+.new_post_input_title {
     width: 90%;
+    padding: 20px;
+    font-size: 22px;
+}
+/*제목 입력칸 focus 없앰*/
+.new_post_input_title:focus{
+    outline: none;
 }
 
-.new_post_input > textarea {
+/*이미지 미리보기 사진*/
+.new_post_container > img {
+    padding-top: 30px;
+    width: 50rem;
+    object-fit: contain;
+}
+/*이미지 파일 업로드 버튼*/
+.new_post_select_img {
+
+}
+/*내용 입력 칸*/
+.new_post_input_content {
     width: 90%;
     margin-top: 20px;
-    flex: 1;
-    padding: 5px;
+    padding: 20px;
     font-size: 15px;
+    border: none;
+    resize: none;  /*텍스트 상자 크기를 사용자가 임의로 변경할 수 없도록 막아줌*/
+    overflow: hidden;
 }
 
-.input_content {
-    width: 90%;
-    margin-top: 20px;
+/*내용 입력 칸 focus 없앰*/
+.new_post_input_content:focus{
+    outline: none;
 }
-
 

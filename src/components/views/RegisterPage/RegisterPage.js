@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import NavBar from "../NavBar/NavBar";
 import CategoryBar from "../NavBar/CategoryBar";
 import {Link, useNavigate} from "react-router-dom";
-import ftm_logo from "../../../_img/ftm_logo.png";
+import ftm_logo from "../../../_img/ftm_logo_blue.png";
 import axios from "axios";
 
 function RegisterPage() {

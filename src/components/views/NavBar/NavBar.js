@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import {Link} from "react-router-dom";
-import ftm_logo from "../../../_img/ftm_logo.png";
+import ftm_logo from "../../../_img/ftm_logo_white.png";
 import {Avatar, Button} from "@mui/material";
 import {Search} from "@mui/icons-material";
 import {useSelector} from "react-redux";

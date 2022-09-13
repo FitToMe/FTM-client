@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import CategoryBar from "../NavBar/CategoryBar";
-import ftm_logo from "../../../_img/ftm_logo.png";
+import ftm_logo from "../../../_img/ftm_logo_blue.png";
 import axios from "axios";
 import {login} from "../../../_features/userSlice";
 import {useDispatch} from "react-redux";
