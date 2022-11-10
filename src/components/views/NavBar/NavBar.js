@@ -7,7 +7,6 @@ import {Search} from "@mui/icons-material";
 import {useSelector} from "react-redux";
 import {selectUser} from "../../../_features/userSlice";
 
-
 function NavBar() {
     const user = useSelector(selectUser);
 
@@ -32,11 +31,11 @@ function NavBar() {
 
             <div className="nav_option">
                 <Link to={!user && '/login'}>
-                    <span className="option_login" onClick={handleAuthentication}>{user ? '로그아웃' : '로그인'}</span>
+                    <span className="option_link" onClick={handleAuthentication}>{user ? '로그아웃' : '로그인'}</span>
                 </Link>
-                <Button>취미 추천</Button>
+                <span className="option_link">취미 추천</span>
                 <Link to="/newPost">
-                    <Button>글쓰기</Button>
+                    <span className="option_link">글쓰기</span>
                 </Link>
                 <Link to={`/myPage/${user}`}>
                     <div className="nav_avatar">

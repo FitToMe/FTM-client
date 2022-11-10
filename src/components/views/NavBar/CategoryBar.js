@@ -1,8 +1,9 @@
 import React from 'react';
+import './CategoryBar.css';
 
 function CategoryBar() {
     return (
-        <div>필터 북마크</div>
+        <div className="CategoryBar">필터 북마크</div>
     );
 }
 

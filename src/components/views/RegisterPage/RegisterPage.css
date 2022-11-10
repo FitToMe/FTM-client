@@ -17,9 +17,8 @@
 /*margin: auto로 좌우 대칭을 맞춰줌*/
 .register_ftm_logo {
     margin-top: 100px;
-    margin-bottom: 50px;
-    object-fit: contain;
-    width: 150px;
+    object-fit: fill;
+    width: 250px;
 }
 
 .register_container >form{
@@ -42,12 +41,12 @@
 }
 
 .register_signUpButton {
-    background: #f6c9c8;
-    border-radius: 2px;
+    background: var(--color-main);
+    border-radius: 5px;
     width: 100%;
-    height: 35px;
+    height: 45px;
     border: 1px solid;
     margin-top: 30px;
-    border-color: #f8d1d1;
+    border-color: var(--color-main);
     margin-bottom: 100px;
 }

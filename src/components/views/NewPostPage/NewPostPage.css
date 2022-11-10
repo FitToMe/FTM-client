@@ -1,14 +1,15 @@
 .new_post {
+    background: #ecdada;
 }
 
 .new_post_input_container {
     background-color: white;
     width: 1000px;
     height: 100%;
-    margin-top: 30px;
+    padding-top: 30px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -102,13 +103,14 @@
 }
 /*내용 입력 칸*/
 .new_post_input_content {
+    overflow: hidden;
     width: 90%;
     margin-top: 20px;
     padding: 20px;
     font-size: 15px;
     border: none;
     resize: none;  /*텍스트 상자 크기를 사용자가 임의로 변경할 수 없도록 막아줌*/
-    overflow: hidden;
+
 }
 
 /*내용 입력 칸 focus 없앰*/

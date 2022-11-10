@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 .App {
   /* navbar 길이 */
   min-width: 1030px;
+  font-family: 'Jua', sans-serif;
+}
+
+:root{
+  --color-main: #FB8500;
+  --color-sub: #FFB703
 }
